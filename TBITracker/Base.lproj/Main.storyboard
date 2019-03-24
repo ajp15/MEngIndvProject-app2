@@ -233,7 +233,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-lL-WA6">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Sq3-lL-WA6" userLabel="Root Stack View">
                                 <rect key="frame" x="20" y="90" width="1072" height="724"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chemical Composition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VV2-eh-l7A">
@@ -242,18 +242,55 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-4c-AU3">
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Potassium]  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-yq-yQ4">
+                                                <rect key="frame" x="10" y="0.0" width="105" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Glucose]    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6I-rW-Xb9">
+                                                <rect key="frame" x="125" y="0.0" width="95" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Lactate]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtk-Ly-ICb">
+                                                <rect key="frame" x="230" y="0.0" width="73.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="Gtk-Ly-ICb" secondAttribute="bottom" id="5rs-9q-rj8"/>
+                                            <constraint firstItem="f7c-yq-yQ4" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" id="AAL-xL-JSS"/>
+                                            <constraint firstItem="f6I-rW-Xb9" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" id="BC5-8p-g91"/>
+                                            <constraint firstAttribute="bottom" secondItem="f6I-rW-Xb9" secondAttribute="bottom" id="GlW-1p-Gc7"/>
+                                            <constraint firstItem="f6I-rW-Xb9" firstAttribute="leading" secondItem="f7c-yq-yQ4" secondAttribute="trailing" constant="10" id="P58-Ln-JJo"/>
+                                            <constraint firstItem="f7c-yq-yQ4" firstAttribute="leading" secondItem="Zqk-4c-AU3" secondAttribute="leading" constant="10" id="U59-6f-pnn"/>
+                                            <constraint firstItem="Gtk-Ly-ICb" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" id="U7Z-LJ-CiM"/>
+                                            <constraint firstAttribute="bottom" secondItem="f7c-yq-yQ4" secondAttribute="bottom" id="UA4-dk-si4"/>
+                                            <constraint firstItem="Gtk-Ly-ICb" firstAttribute="leading" secondItem="f6I-rW-Xb9" secondAttribute="trailing" constant="10" id="aHr-5u-rEd"/>
+                                            <constraint firstItem="Gtk-Ly-ICb" firstAttribute="leading" secondItem="f6I-rW-Xb9" secondAttribute="trailing" constant="10" id="boN-Cv-lFu"/>
+                                            <constraint firstItem="f6I-rW-Xb9" firstAttribute="leading" secondItem="f7c-yq-yQ4" secondAttribute="trailing" constant="10" id="s9f-LE-b46"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTp-O8-ntC" userLabel="chemCompGraph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="682"/>
+                                        <rect key="frame" x="0.0" y="62.5" width="1072" height="661.5"/>
                                     </view>
                                 </subviews>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.83529411764705885" green="0.94901960784313721" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Sq3-lL-WA6" firstAttribute="top" secondItem="1lz-MO-QJH" secondAttribute="top" constant="20" id="0po-xD-CWG"/>
-                            <constraint firstItem="1lz-MO-QJH" firstAttribute="bottom" secondItem="Sq3-lL-WA6" secondAttribute="bottom" constant="20" id="3ex-iW-c0A"/>
-                            <constraint firstItem="Sq3-lL-WA6" firstAttribute="leading" secondItem="1lz-MO-QJH" secondAttribute="leading" constant="20" id="TO2-vq-iUj"/>
-                            <constraint firstItem="1lz-MO-QJH" firstAttribute="trailing" secondItem="Sq3-lL-WA6" secondAttribute="trailing" constant="20" id="YXA-1z-rek"/>
+                            <constraint firstItem="1lz-MO-QJH" firstAttribute="trailing" secondItem="Sq3-lL-WA6" secondAttribute="trailing" constant="20" id="8Ed-nj-6NW"/>
+                            <constraint firstItem="1lz-MO-QJH" firstAttribute="bottom" secondItem="Sq3-lL-WA6" secondAttribute="bottom" constant="20" id="Z3p-LF-nuM"/>
+                            <constraint firstItem="Sq3-lL-WA6" firstAttribute="top" secondItem="1lz-MO-QJH" secondAttribute="top" constant="20" id="cQf-HS-nKd"/>
+                            <constraint firstItem="Sq3-lL-WA6" firstAttribute="leading" secondItem="1lz-MO-QJH" secondAttribute="leading" constant="20" id="svn-MM-3F5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1lz-MO-QJH"/>
                     </view>
@@ -277,7 +314,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMI-Mc-SEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1429.1015625" y="0.0"/>
+            <point key="canvasLocation" x="1428.7769784172663" y="0.0"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
