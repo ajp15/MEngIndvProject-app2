@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  TBITracker
+//  TBI_Tracker
 //
-//  Created by Aishwarya Pattar on 23/03/2019.
+//  Created by Aishwarya Pattar on 31/01/2019.
 //  Copyright © 2019 Aishwarya Pattar. All rights reserved.
 //
 
