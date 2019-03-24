@@ -298,7 +298,7 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Individual Plots &gt;" id="ldx-6F-g51">
                                 <connections>
-                                    <segue destination="49e-Tb-3d3" kind="show" id="7pX-8x-xlJ"/>
+                                    <action selector="indvPlotsButton:" destination="qIy-38-aBU" id="rq1-zZ-lOe"/>
                                 </connections>
                             </barButtonItem>
                             <barButtonItem systemItem="refresh" id="sXo-Qw-C3V">
@@ -310,6 +310,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chemCompLineChartView" destination="TTp-O8-ntC" id="IAh-xA-63u"/>
+                        <segue destination="49e-Tb-3d3" kind="show" identifier="segue" id="f6D-pR-JyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMI-Mc-SEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
