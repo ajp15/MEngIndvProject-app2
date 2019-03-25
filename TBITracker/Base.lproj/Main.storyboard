@@ -253,7 +253,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="kButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="4Us-ed-ySk"/>
-                                                    <segue destination="9pv-A4-QxB" kind="show" identifier="potassium" id="6pi-PO-BtW"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f75-86-4wv">
@@ -264,7 +263,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="gButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="4J2-Qe-QOs"/>
-                                                    <segue destination="8rJ-Kc-sve" kind="show" identifier="glucose" id="VfE-7T-LrM"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baQ-8Q-TNf">
@@ -275,7 +273,6 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="lButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="GKi-fX-Lc3"/>
-                                                    <segue destination="Yhn-1k-knS" kind="show" identifier="lactate" id="UjH-l5-1pL"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -318,6 +315,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="chemCompLineChartView" destination="TTp-O8-ntC" id="IAh-xA-63u"/>
+                        <segue destination="9pv-A4-QxB" kind="show" identifier="potassium" id="2tf-Ne-Rao"/>
+                        <segue destination="8rJ-Kc-sve" kind="show" identifier="glucose" id="MQX-6f-Jhu"/>
+                        <segue destination="Yhn-1k-knS" kind="show" identifier="lactate" id="yGU-n2-0zN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMI-Mc-SEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
