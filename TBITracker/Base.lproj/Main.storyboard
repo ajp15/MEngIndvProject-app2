@@ -252,6 +252,7 @@
                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="kButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="4Us-ed-ySk"/>
                                                     <segue destination="9pv-A4-QxB" kind="show" identifier="potassium" id="6pi-PO-BtW"/>
                                                 </connections>
                                             </button>
@@ -262,6 +263,7 @@
                                                     <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="gButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="4J2-Qe-QOs"/>
                                                     <segue destination="8rJ-Kc-sve" kind="show" identifier="glucose" id="VfE-7T-LrM"/>
                                                 </connections>
                                             </button>
@@ -272,6 +274,7 @@
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="lButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="GKi-fX-Lc3"/>
                                                     <segue destination="Yhn-1k-knS" kind="show" identifier="lactate" id="UjH-l5-1pL"/>
                                                 </connections>
                                             </button>
