@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ofT-Rn-sLh">
-                                <rect key="frame" x="20" y="90" width="1072" height="674"/>
+                                <rect key="frame" x="20" y="90" width="1072" height="724"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Potassium Ion Concentration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sjV-pN-Dj2">
                                         <rect key="frame" x="0.0" y="0.0" width="1072" height="42"/>
@@ -28,7 +28,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLX-8J-neG" userLabel="K+Graph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="632"/>
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="682"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -49,7 +49,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997" y="-715"/>
+            <point key="canvasLocation" x="2243" y="-721"/>
         </scene>
         <!--Glucose-->
         <scene sceneID="wg7-f3-ORb">
@@ -60,7 +60,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="YwW-Nb-VVb">
-                                <rect key="frame" x="20" y="90" width="1072" height="674"/>
+                                <rect key="frame" x="20" y="90" width="1072" height="724"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glucose Concentration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9tj-WF-zdA">
                                         <rect key="frame" x="0.0" y="0.0" width="1072" height="42"/>
@@ -69,7 +69,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ab2-wo-5AY" userLabel="GlucoseGraph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="632"/>
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="682"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997.65625" y="0.0"/>
+            <point key="canvasLocation" x="2244" y="-6"/>
         </scene>
         <!--Lactate-->
         <scene sceneID="lmZ-00-o2e">
@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ywG-JH-Bzl">
-                                <rect key="frame" x="20" y="90" width="1072" height="674"/>
+                                <rect key="frame" x="20" y="90" width="1072" height="724"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lactate Concentration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugt-DT-BDi">
                                         <rect key="frame" x="0.0" y="0.0" width="1072" height="42"/>
@@ -110,7 +110,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohz-x5-Noz" userLabel="LactateGraph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="632"/>
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="682"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jx5-h2-AKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2997" y="728"/>
+            <point key="canvasLocation" x="2243" y="722"/>
         </scene>
         <!--Login-->
         <scene sceneID="Eyc-KM-XB2">
@@ -243,44 +243,56 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqk-4c-AU3">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="21"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Potassium]  " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7c-yq-yQ4">
-                                                <rect key="frame" x="10" y="0.0" width="105" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Glucose]    " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6I-rW-Xb9">
-                                                <rect key="frame" x="125" y="0.0" width="95" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <color key="textColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Lactate]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtk-Ly-ICb">
-                                                <rect key="frame" x="230" y="0.0" width="73.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgZ-Sj-KsY">
+                                                <rect key="frame" x="20" y="-6" width="108" height="33"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="[Potassium]  ">
+                                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="9pv-A4-QxB" kind="show" identifier="potassium" id="6pi-PO-BtW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f75-86-4wv">
+                                                <rect key="frame" x="148" y="-6" width="89" height="33"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="[Glucose]  ">
+                                                    <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="8rJ-Kc-sve" kind="show" identifier="glucose" id="VfE-7T-LrM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baQ-8Q-TNf">
+                                                <rect key="frame" x="257" y="-6" width="84" height="33"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <state key="normal" title="[Lactate]  ">
+                                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="Yhn-1k-knS" kind="show" identifier="lactate" id="UjH-l5-1pL"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="Gtk-Ly-ICb" secondAttribute="bottom" id="5rs-9q-rj8"/>
-                                            <constraint firstItem="f7c-yq-yQ4" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" id="AAL-xL-JSS"/>
-                                            <constraint firstItem="f6I-rW-Xb9" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" id="BC5-8p-g91"/>
-                                            <constraint firstAttribute="bottom" secondItem="f6I-rW-Xb9" secondAttribute="bottom" id="GlW-1p-Gc7"/>
-                                            <constraint firstItem="f6I-rW-Xb9" firstAttribute="leading" secondItem="f7c-yq-yQ4" secondAttribute="trailing" constant="10" id="P58-Ln-JJo"/>
-                                            <constraint firstItem="f7c-yq-yQ4" firstAttribute="leading" secondItem="Zqk-4c-AU3" secondAttribute="leading" constant="10" id="U59-6f-pnn"/>
-                                            <constraint firstItem="Gtk-Ly-ICb" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" id="U7Z-LJ-CiM"/>
-                                            <constraint firstAttribute="bottom" secondItem="f7c-yq-yQ4" secondAttribute="bottom" id="UA4-dk-si4"/>
-                                            <constraint firstItem="Gtk-Ly-ICb" firstAttribute="leading" secondItem="f6I-rW-Xb9" secondAttribute="trailing" constant="10" id="aHr-5u-rEd"/>
-                                            <constraint firstItem="Gtk-Ly-ICb" firstAttribute="leading" secondItem="f6I-rW-Xb9" secondAttribute="trailing" constant="10" id="boN-Cv-lFu"/>
-                                            <constraint firstItem="f6I-rW-Xb9" firstAttribute="leading" secondItem="f7c-yq-yQ4" secondAttribute="trailing" constant="10" id="s9f-LE-b46"/>
+                                            <constraint firstAttribute="bottom" secondItem="PgZ-Sj-KsY" secondAttribute="bottom" constant="-6" id="2O5-ak-37j"/>
+                                            <constraint firstItem="PgZ-Sj-KsY" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="-6" id="72R-5H-k5p"/>
+                                            <constraint firstItem="baQ-8Q-TNf" firstAttribute="leading" secondItem="f75-86-4wv" secondAttribute="trailing" constant="20" id="7Yy-Xx-8J1"/>
+                                            <constraint firstItem="f75-86-4wv" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="-6" id="FuE-ak-qZz"/>
+                                            <constraint firstItem="baQ-8Q-TNf" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="-6" id="a04-6N-RIa"/>
+                                            <constraint firstAttribute="bottom" secondItem="f75-86-4wv" secondAttribute="bottom" constant="-6" id="l4F-09-HhR"/>
+                                            <constraint firstAttribute="bottom" secondItem="baQ-8Q-TNf" secondAttribute="bottom" constant="-6" id="nZh-jM-X1K"/>
+                                            <constraint firstItem="PgZ-Sj-KsY" firstAttribute="leading" secondItem="Zqk-4c-AU3" secondAttribute="leading" constant="20" id="o9J-Ra-O3K"/>
+                                            <constraint firstItem="f75-86-4wv" firstAttribute="leading" secondItem="PgZ-Sj-KsY" secondAttribute="trailing" constant="20" id="qkL-3X-oYp"/>
+                                            <constraint firstItem="baQ-8Q-TNf" firstAttribute="leading" secondItem="f75-86-4wv" secondAttribute="trailing" constant="20" id="xkF-nG-Pbl"/>
+                                            <constraint firstItem="f75-86-4wv" firstAttribute="leading" secondItem="PgZ-Sj-KsY" secondAttribute="trailing" constant="20" id="zd7-eR-bok"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TTp-O8-ntC" userLabel="chemCompGraph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="62.5" width="1072" height="661.5"/>
+                                        <rect key="frame" x="0.0" y="63" width="1072" height="661"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -295,46 +307,19 @@
                         <viewLayoutGuide key="safeArea" id="1lz-MO-QJH"/>
                     </view>
                     <navigationItem key="navigationItem" id="NA6-1o-543">
-                        <rightBarButtonItems>
-                            <barButtonItem title="Individual Plots &gt;" id="ldx-6F-g51">
-                                <connections>
-                                    <action selector="indvPlotsButton:" destination="qIy-38-aBU" id="rq1-zZ-lOe"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem systemItem="refresh" id="sXo-Qw-C3V">
-                                <connections>
-                                    <action selector="refreshButton:" destination="qIy-38-aBU" id="5rd-sO-dbT"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="sXo-Qw-C3V">
+                            <connections>
+                                <action selector="refreshButton:" destination="qIy-38-aBU" id="5rd-sO-dbT"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="chemCompLineChartView" destination="TTp-O8-ntC" id="IAh-xA-63u"/>
-                        <segue destination="49e-Tb-3d3" kind="show" identifier="segue" id="f6D-pR-JyC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMI-Mc-SEL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1428.7769784172663" y="0.0"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="yl2-sM-qoP">
-            <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
-                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="Yhn-1k-knS" kind="relationship" relationship="viewControllers" id="K2K-3g-m7L"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2172.65625" y="0.0"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="isC-nM-9dD">
