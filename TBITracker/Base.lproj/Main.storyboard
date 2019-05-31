@@ -281,6 +281,10 @@
                                                     <segment title="Voltage"/>
                                                     <segment title="Concentration"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="switch:" destination="qIy-38-aBU" eventType="valueChanged" id="fw7-Cf-Gx2"/>
+                                                    <action selector="toggle:" destination="qIy-38-aBU" eventType="valueChanged" id="M1T-hT-HE3"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -581,6 +585,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="GCal1" destination="tbO-BM-Sqr" id="LVv-wZ-CxW"/>
+                        <outlet property="GCal2" destination="Z49-rv-AUC" id="WJM-Q9-Qtj"/>
+                        <outlet property="GCal3" destination="2lj-qb-rnL" id="JEz-Dt-Kvg"/>
+                        <outlet property="KCal1" destination="JpA-Yt-CBh" id="lVP-gA-dhM"/>
+                        <outlet property="LCal1" destination="MDc-zn-aDQ" id="tsi-Eh-HVe"/>
+                        <outlet property="LCal2" destination="JGn-8V-7ge" id="vsg-iJ-EdH"/>
+                        <outlet property="LCal3" destination="stA-hE-3qz" id="Oc9-JE-ZWG"/>
                         <outlet property="chemCompLineChartView" destination="TTp-O8-ntC" id="IAh-xA-63u"/>
                         <segue destination="9pv-A4-QxB" kind="show" identifier="potassium" id="2tf-Ne-Rao"/>
                         <segue destination="8rJ-Kc-sve" kind="show" identifier="glucose" id="MQX-6f-Jhu"/>
