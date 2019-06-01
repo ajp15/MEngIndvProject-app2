@@ -27,8 +27,35 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tz2-c1-zHV">
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltage (V) vs. Time (ms)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KKO-Ve-nB5" userLabel="KLabel">
+                                                <rect key="frame" x="20" y="14" width="207" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ctY-Br-9gJ">
+                                                <rect key="frame" x="851" y="10" width="201" height="29"/>
+                                                <segments>
+                                                    <segment title="Voltage"/>
+                                                    <segment title="Concentration"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="KKO-Ve-nB5" firstAttribute="top" secondItem="tz2-c1-zHV" secondAttribute="top" constant="14" id="0Sn-ho-W72"/>
+                                            <constraint firstAttribute="bottom" secondItem="ctY-Br-9gJ" secondAttribute="bottom" constant="10" id="Cce-eQ-FC7"/>
+                                            <constraint firstAttribute="bottom" secondItem="KKO-Ve-nB5" secondAttribute="bottom" constant="13" id="CrD-vM-yA5"/>
+                                            <constraint firstAttribute="trailing" secondItem="ctY-Br-9gJ" secondAttribute="trailing" constant="20" id="Lpz-uS-Z54"/>
+                                            <constraint firstItem="KKO-Ve-nB5" firstAttribute="leading" secondItem="tz2-c1-zHV" secondAttribute="leading" constant="20" id="VK3-Gt-kQv"/>
+                                            <constraint firstItem="ctY-Br-9gJ" firstAttribute="top" secondItem="tz2-c1-zHV" secondAttribute="top" constant="10" id="xte-rJ-H5B"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mLX-8J-neG" userLabel="K+Graph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="682"/>
+                                        <rect key="frame" x="0.0" y="90" width="1072" height="634"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -49,7 +76,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2243" y="-721"/>
+            <point key="canvasLocation" x="2242.9856115107914" y="-721.58273381294964"/>
         </scene>
         <!--Glucose-->
         <scene sceneID="wg7-f3-ORb">
@@ -68,8 +95,35 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sYO-54-oBK">
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltage (V) vs. Time (ms)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTJ-Tc-Vc3" userLabel="GLabel">
+                                                <rect key="frame" x="20" y="13" width="207" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lr2-w4-qkM">
+                                                <rect key="frame" x="851" y="10" width="201" height="29"/>
+                                                <segments>
+                                                    <segment title="Voltage"/>
+                                                    <segment title="Concentration"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="lr2-w4-qkM" firstAttribute="top" secondItem="sYO-54-oBK" secondAttribute="top" constant="10" id="14F-Av-6Vd"/>
+                                            <constraint firstItem="xTJ-Tc-Vc3" firstAttribute="top" secondItem="sYO-54-oBK" secondAttribute="top" constant="13" id="5Jb-iK-wJg"/>
+                                            <constraint firstItem="xTJ-Tc-Vc3" firstAttribute="leading" secondItem="sYO-54-oBK" secondAttribute="leading" constant="20" id="im1-cK-BXI"/>
+                                            <constraint firstAttribute="bottom" secondItem="lr2-w4-qkM" secondAttribute="bottom" constant="10" id="qfe-Gk-Zgy"/>
+                                            <constraint firstAttribute="trailing" secondItem="lr2-w4-qkM" secondAttribute="trailing" constant="20" id="rQM-91-FfN"/>
+                                            <constraint firstAttribute="bottom" secondItem="xTJ-Tc-Vc3" secondAttribute="bottom" constant="14" id="vS6-Zo-6AW"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ab2-wo-5AY" userLabel="GlucoseGraph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="682"/>
+                                        <rect key="frame" x="0.0" y="90" width="1072" height="634"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -109,8 +163,35 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5w-IF-EQx">
+                                        <rect key="frame" x="0.0" y="42" width="1072" height="48"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltage (V) vs. Time (ms)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pok-Sr-2pj" userLabel="LLabel">
+                                                <rect key="frame" x="20" y="13" width="207" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y3I-UV-Was">
+                                                <rect key="frame" x="851" y="10" width="201" height="29"/>
+                                                <segments>
+                                                    <segment title="Voltage"/>
+                                                    <segment title="Concentration"/>
+                                                </segments>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="pok-Sr-2pj" firstAttribute="top" secondItem="r5w-IF-EQx" secondAttribute="top" constant="13" id="FUd-VQ-hrv"/>
+                                            <constraint firstAttribute="bottom" secondItem="y3I-UV-Was" secondAttribute="bottom" constant="10" id="H12-u3-xTw"/>
+                                            <constraint firstAttribute="trailing" secondItem="y3I-UV-Was" secondAttribute="trailing" constant="20" id="H9o-Mh-eL0"/>
+                                            <constraint firstAttribute="bottom" secondItem="pok-Sr-2pj" secondAttribute="bottom" constant="14" id="Pgk-eb-KcU"/>
+                                            <constraint firstItem="pok-Sr-2pj" firstAttribute="leading" secondItem="r5w-IF-EQx" secondAttribute="leading" constant="20" id="U2N-aO-VBc"/>
+                                            <constraint firstItem="y3I-UV-Was" firstAttribute="top" secondItem="r5w-IF-EQx" secondAttribute="top" constant="10" id="tIB-Nk-NyZ"/>
+                                        </constraints>
+                                    </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ohz-x5-Noz" userLabel="LactateGraph" customClass="LineChartView" customModule="Charts">
-                                        <rect key="frame" x="0.0" y="42" width="1072" height="682"/>
+                                        <rect key="frame" x="0.0" y="90" width="1072" height="634"/>
                                     </view>
                                 </subviews>
                             </stackView>
@@ -246,9 +327,9 @@
                                         <rect key="frame" x="0.0" y="42" width="1072" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PgZ-Sj-KsY">
-                                                <rect key="frame" x="20" y="-6" width="104" height="62"/>
+                                                <rect key="frame" x="20" y="-6" width="86" height="62"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <state key="normal" title="[Potassium] ">
+                                                <state key="normal" title="Potassium">
                                                     <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -256,9 +337,9 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f75-86-4wv">
-                                                <rect key="frame" x="144" y="-6" width="81" height="62"/>
+                                                <rect key="frame" x="126" y="-6" width="67" height="62"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <state key="normal" title="[Glucose]">
+                                                <state key="normal" title="Glucose">
                                                     <color key="titleColor" red="0.55634254220000001" green="0.97934550050000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -266,26 +347,21 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baQ-8Q-TNf">
-                                                <rect key="frame" x="245" y="-6" width="76" height="62"/>
+                                                <rect key="frame" x="213" y="-6" width="62" height="62"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                                <state key="normal" title="[Lactate]">
+                                                <state key="normal" title="Lactate">
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="lButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="GKi-fX-Lc3"/>
                                                 </connections>
                                             </button>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Zo7-7U-24v">
-                                                <rect key="frame" x="836" y="11" width="201" height="29"/>
-                                                <segments>
-                                                    <segment title="Voltage"/>
-                                                    <segment title="Concentration"/>
-                                                </segments>
-                                                <connections>
-                                                    <action selector="switch:" destination="qIy-38-aBU" eventType="valueChanged" id="fw7-Cf-Gx2"/>
-                                                    <action selector="toggle:" destination="qIy-38-aBU" eventType="valueChanged" id="M1T-hT-HE3"/>
-                                                </connections>
-                                            </segmentedControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltage (V) vs Time (ms)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cb-Fi-3a5">
+                                                <rect key="frame" x="850.5" y="15" width="201.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -293,15 +369,15 @@
                                             <constraint firstItem="PgZ-Sj-KsY" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="-6" id="72R-5H-k5p"/>
                                             <constraint firstItem="baQ-8Q-TNf" firstAttribute="leading" secondItem="f75-86-4wv" secondAttribute="trailing" constant="20" id="7Yy-Xx-8J1"/>
                                             <constraint firstItem="f75-86-4wv" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="-6" id="FuE-ak-qZz"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Cb-Fi-3a5" secondAttribute="trailing" constant="20" id="Im3-0F-iy2"/>
+                                            <constraint firstAttribute="bottom" secondItem="7Cb-Fi-3a5" secondAttribute="bottom" constant="14" id="WHb-Ve-vAz"/>
                                             <constraint firstItem="baQ-8Q-TNf" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="-6" id="a04-6N-RIa"/>
+                                            <constraint firstItem="7Cb-Fi-3a5" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="15" id="d4I-1m-vY8"/>
                                             <constraint firstAttribute="bottom" secondItem="f75-86-4wv" secondAttribute="bottom" constant="-6" id="l4F-09-HhR"/>
-                                            <constraint firstItem="Zo7-7U-24v" firstAttribute="top" secondItem="Zqk-4c-AU3" secondAttribute="top" constant="11" id="lca-1u-FXg"/>
-                                            <constraint firstAttribute="bottom" secondItem="Zo7-7U-24v" secondAttribute="bottom" constant="11" id="mdk-Es-9uS"/>
                                             <constraint firstAttribute="bottom" secondItem="baQ-8Q-TNf" secondAttribute="bottom" constant="-6" id="nZh-jM-X1K"/>
                                             <constraint firstItem="PgZ-Sj-KsY" firstAttribute="leading" secondItem="Zqk-4c-AU3" secondAttribute="leading" constant="20" id="o9J-Ra-O3K"/>
                                             <constraint firstItem="f75-86-4wv" firstAttribute="leading" secondItem="PgZ-Sj-KsY" secondAttribute="trailing" constant="20" id="qkL-3X-oYp"/>
                                             <constraint firstItem="baQ-8Q-TNf" firstAttribute="leading" secondItem="f75-86-4wv" secondAttribute="trailing" constant="20" id="xkF-nG-Pbl"/>
-                                            <constraint firstAttribute="trailing" secondItem="Zo7-7U-24v" secondAttribute="trailing" constant="35" id="zBX-Xl-Y5W"/>
                                             <constraint firstItem="f75-86-4wv" firstAttribute="leading" secondItem="PgZ-Sj-KsY" secondAttribute="trailing" constant="20" id="zd7-eR-bok"/>
                                         </constraints>
                                     </view>
