@@ -42,6 +42,9 @@
                                                     <segment title="Voltage"/>
                                                     <segment title="Concentration"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="Ktoggle:" destination="9pv-A4-QxB" eventType="valueChanged" id="5Iv-yj-6zA"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -71,6 +74,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="K+" id="acW-dT-cKf"/>
                     <connections>
+                        <outlet property="KLabel" destination="KKO-Ve-nB5" id="bPp-k5-IKL"/>
                         <outlet property="kLineChartView" destination="mLX-8J-neG" id="fiH-KY-OgU"/>
                     </connections>
                 </viewController>
@@ -110,6 +114,9 @@
                                                     <segment title="Voltage"/>
                                                     <segment title="Concentration"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="Gtoggle:" destination="8rJ-Kc-sve" eventType="valueChanged" id="4fX-VX-DGt"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -139,6 +146,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Glucose" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="GLabel" destination="xTJ-Tc-Vc3" id="ONP-ag-Clf"/>
                         <outlet property="glucoseLineChartView" destination="Ab2-wo-5AY" id="eVW-W5-VPn"/>
                     </connections>
                 </viewController>
@@ -178,6 +186,9 @@
                                                     <segment title="Voltage"/>
                                                     <segment title="Concentration"/>
                                                 </segments>
+                                                <connections>
+                                                    <action selector="Ltoggle:" destination="Yhn-1k-knS" eventType="valueChanged" id="FGg-Dv-y4c"/>
+                                                </connections>
                                             </segmentedControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,6 +218,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Lactate" id="qOC-CW-88n"/>
                     <connections>
+                        <outlet property="KLabel" destination="pok-Sr-2pj" id="dgk-DS-oVL"/>
                         <outlet property="lactateLineChartView" destination="ohz-x5-Noz" id="AjX-UT-zjr"/>
                     </connections>
                 </viewController>
