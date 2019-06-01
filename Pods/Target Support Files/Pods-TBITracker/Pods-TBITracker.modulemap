@@ -1,0 +1,6 @@
+module Pods_TBITracker {
+  umbrella header "Pods-TBITracker-umbrella.h"
+
+  export *
+  module * { export * }
+}
