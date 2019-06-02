@@ -187,7 +187,7 @@
                                                     <segment title="Concentration"/>
                                                 </segments>
                                                 <connections>
-                                                    <action selector="Ltoggle:" destination="Yhn-1k-knS" eventType="valueChanged" id="FGg-Dv-y4c"/>
+                                                    <action selector="Ltoggle:" destination="Yhn-1k-knS" eventType="valueChanged" id="Hd4-DW-5NA"/>
                                                 </connections>
                                             </segmentedControl>
                                         </subviews>
@@ -218,8 +218,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Lactate" id="qOC-CW-88n"/>
                     <connections>
-                        <outlet property="KLabel" destination="pok-Sr-2pj" id="dgk-DS-oVL"/>
-                        <outlet property="lactateLineChartView" destination="ohz-x5-Noz" id="AjX-UT-zjr"/>
+                        <outlet property="LLabel" destination="pok-Sr-2pj" id="v1c-8I-U68"/>
+                        <outlet property="lactateLineChartView" destination="ohz-x5-Noz" id="kVz-9l-CK4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jx5-h2-AKx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -365,7 +365,7 @@
                                                     <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="lButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="GKi-fX-Lc3"/>
+                                                    <action selector="lButton:" destination="qIy-38-aBU" eventType="touchUpInside" id="VW3-KG-80h"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Voltage (mV) vs Time (ms)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Cb-Fi-3a5">
@@ -683,7 +683,7 @@
                         <outlet property="chemCompLineChartView" destination="TTp-O8-ntC" id="IAh-xA-63u"/>
                         <segue destination="9pv-A4-QxB" kind="show" identifier="potassium" id="2tf-Ne-Rao"/>
                         <segue destination="8rJ-Kc-sve" kind="show" identifier="glucose" id="MQX-6f-Jhu"/>
-                        <segue destination="Yhn-1k-knS" kind="show" identifier="lactate" id="yGU-n2-0zN"/>
+                        <segue destination="Yhn-1k-knS" kind="show" identifier="lactate" id="W9b-qI-oJr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bMI-Mc-SEL" userLabel="First Responder" sceneMemberID="firstResponder"/>

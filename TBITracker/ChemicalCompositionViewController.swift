@@ -83,7 +83,7 @@ class ChemicalCompositionViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "potassium" {
-             let KController = segue.destination as! PotassiumViewController
+            let KController = segue.destination as! PotassiumViewController
             KController.myArr = Karr
             KController.myTime = timeK
             KController.myKCal1 = KCal1.text ?? ""
@@ -101,9 +101,9 @@ class ChemicalCompositionViewController: UIViewController {
             let LController = segue.destination as! LactateViewController
             LController.myArr = Larr
             LController.myTime = timeL
-            //LController.myLCal1 = LCal1.text ?? ""
-            //LController.myLCal2 = LCal2.text ?? ""
-            //LController.myLCal3 = LCal3.text ?? ""
+            LController.myLCal1 = LCal1.text ?? ""
+            LController.myLCal2 = LCal2.text ?? ""
+            LController.myLCal3 = LCal3.text ?? "" 
         }
     }
     
