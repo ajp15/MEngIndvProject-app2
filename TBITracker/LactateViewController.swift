@@ -46,7 +46,7 @@ class LactateViewController: UIViewController {
                 let Cal1 : Double = Double(myLCal1)!
                 let Cal2 : Double = Double(myLCal2)!
                 let Cal3 : Double = Double(myLCal3)!
-                setConcValues(p1 : Cal1, p2: Cal2, p3: Cal3)
+                setConcValues(v1 : Cal1, v2: Cal2, v3: Cal3)
             }
         }
     }
@@ -101,16 +101,31 @@ class LactateViewController: UIViewController {
         setL.setColor(.blue)
     }
     
-    func setConcValues(p1 : Double, p2 : Double, p3 : Double) {
+    func setConcValues(v1 : Double, v2 : Double, v3 : Double) {
         
-        // find calibration equation: y = mx + c
+        // find line of best fit to find conversion from voltage -> conc in form conc = m*voltage + c
+        let voltage = [v1, v2, v3] // mV
+        let conc = [0.0, 0.5, 1] // mM
+        let mean_voltage: Double = (v1 + v2 + v3)/3
+        let mean_conc = 0.5 //(0 + 0.5 + 1)/3
+        var num = 0.0
+        var den = 0.0
+        
+        // using least squares method
+        for i in 0...2 {
+            num = num + (voltage[i] - mean_voltage)*(conc[i] - mean_conc)
+            den = den + pow((voltage[i] - mean_voltage), 2)
+        }
+        
+        let m = num/den
+        let c = mean_conc - m*mean_voltage
         
         
         // sets x and y values for Glucose
         let entriesL = (0..<Larr.count).map { (i) -> ChartDataEntry in
-            let Lval = Larr[i]
+            let LConcval = m*Larr[i] + c
             let timeValL = timeL[i]
-            return ChartDataEntry(x: timeValL, y: Lval)
+            return ChartDataEntry(x: timeValL, y: LConcval)
         }
         let setL = LineChartDataSet(values: entriesL, label: "[Lactate]")
         
