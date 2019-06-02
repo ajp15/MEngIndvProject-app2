@@ -13,11 +13,11 @@ import CoreBluetooth
 class ChemicalCompositionViewController: UIViewController {
     
     // initialise arrays
-    var timeK : [Double] = []
+    var timeK : [Date] = []
     var Karr : [Double] = []
-    var timeG : [Double] = []
+    var timeG : [Date] = []
     var Garr : [Double] = []
-    var timeL : [Double] = []
+    var timeL : [Date] = []
     var Larr : [Double] = []
     
     // Initialise variables
@@ -26,6 +26,7 @@ class ChemicalCompositionViewController: UIViewController {
     var txCharacteristic : CBCharacteristic?
     var rxCharacteristic : CBCharacteristic?
     var rxString = String()
+    var globalBootTime = Date()
     
     // IBOutlets
     @IBOutlet weak var chemCompLineChartView: LineChartView!
@@ -75,6 +76,9 @@ class ChemicalCompositionViewController: UIViewController {
         self.chemCompLineChartView.rightAxis.enabled = false
         self.chemCompLineChartView.backgroundColor = .white
         self.chemCompLineChartView.legend.enabled = false
+        self.chemCompLineChartView.xAxis.labelPosition = .bottom
+        let xValuesNumberFormatter = DateValueFormatter()
+        self.chemCompLineChartView.xAxis.valueFormatter = xValuesNumberFormatter
         
     }
     
@@ -85,13 +89,13 @@ class ChemicalCompositionViewController: UIViewController {
         if segue.identifier == "potassium" {
             let KController = segue.destination as! PotassiumViewController
             KController.myArr = Karr
-            KController.myTime = timeK
+            //KController.myTime = timeK
             KController.myKCal1 = KCal1.text ?? ""
         }
         else if segue.identifier == "glucose" {
             let GController = segue.destination as! GlucoseViewController
             GController.myArr = Garr
-            GController.myTime = timeG
+            //GController.myTime = timeG
             GController.myGCal1 = GCal1.text ?? ""
             GController.myGCal2 = GCal2.text ?? ""
             GController.myGCal3 = GCal3.text ?? ""
@@ -100,7 +104,7 @@ class ChemicalCompositionViewController: UIViewController {
         else if segue.identifier == "lactate" {
             let LController = segue.destination as! LactateViewController
             LController.myArr = Larr
-            LController.myTime = timeL
+            //LController.myTime = timeL
             LController.myLCal1 = LCal1.text ?? ""
             LController.myLCal2 = LCal2.text ?? ""
             LController.myLCal3 = LCal3.text ?? "" 
@@ -113,7 +117,7 @@ class ChemicalCompositionViewController: UIViewController {
         // sets x and y values for K+
         let entriesK = (0..<Karr.count).map { (i) -> ChartDataEntry in
             let Kval = Karr[i]
-            let timeValK = timeK[i]
+            let timeValK = timeK[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValK, y: Kval)
         }
         let setK = LineChartDataSet(values: entriesK, label: "[K+]")
@@ -121,7 +125,7 @@ class ChemicalCompositionViewController: UIViewController {
         // sets x and y values for Glucose
         let entriesG = (0..<Garr.count).map { (i) -> ChartDataEntry in
             let Gval = Garr[i]
-            let timeValG = timeG[i]
+            let timeValG = timeG[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValG, y: Gval)
         }
         let setG = LineChartDataSet(values: entriesG, label: "[Glucose]")
@@ -129,7 +133,7 @@ class ChemicalCompositionViewController: UIViewController {
         // sets x and y values for Lactate
         let entriesL = (0..<Larr.count).map { (i) -> ChartDataEntry in
             let Lval = Larr[i]
-            let timeValL = timeL[i]
+            let timeValL = timeL[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValL, y: Lval)
         }
         let setL = LineChartDataSet(values: entriesL, label: "[Lactate]")
@@ -192,7 +196,7 @@ extension ChemicalCompositionViewController: CBCentralManagerDelegate {
         centralManager.connect(peripheral)
     }
     
-    
+    // connects to BLE module
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         print("Connected!")
         bluefruitPeripheral.discoverServices(nil)
@@ -284,21 +288,43 @@ extension ChemicalCompositionViewController: CBPeripheralDelegate {
             
             // extract time stamp and values
             let space = rxString.firstIndex(of: " ") ?? rxString.endIndex
-            let time = rxString[..<space]
+            let time = rxString[..<space] // time in ms written as string
             let val = rxString.dropFirst(time.count + 1)
+            
+            // set global boot time in ms
+            if timeK.isEmpty && timeG.isEmpty && timeL.isEmpty {
+                let now = Date()
+                globalBootTime = now - Double(time)!/1000 // subtract time in seconds
+            }
+            
+            // find real time and convert to NSDate
+            let realTime = globalBootTime + Double(time)!/1000 // add time in seconds
             
             // store in corresponding array depending on firstLetter
             if firstLetter == "K" {
-                timeK.append(Double(time)!/1000)
+                timeK.append(realTime) // time in seconds
                 Karr.append(Double(val)!)
             } else if firstLetter == "G" {
-                timeG.append(Double(time)!/1000)
+                timeG.append(realTime) // time in seconds
                 Garr.append(Double(val)!)
             } else if firstLetter == "L" {
-                timeL.append(Double(time)!/1000)
+                timeL.append(realTime) // time in seconds
                 Larr.append(Double(val)!)
                 setChartValues()
             }
+            
+            
+            /*if firstLetter == "K" {
+                timeK.append(Double(time)!/1000) // time in seconds
+                Karr.append(Double(val)!)
+            } else if firstLetter == "G" {
+                timeG.append(Double(time)!/1000) // time in seconds
+                Garr.append(Double(val)!)
+            } else if firstLetter == "L" {
+                timeL.append(Double(time)!/1000) // time in seconds
+                Larr.append(Double(val)!)
+                setChartValues()
+            }*/
         }
     }
 }

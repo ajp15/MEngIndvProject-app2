@@ -17,6 +17,7 @@
 		3284197F2246C850009616B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 328419812246C850009616B0 /* LaunchScreen.storyboard */; };
 		328419832246C8E8009616B0 /* BalloonMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328419822246C8E8009616B0 /* BalloonMarker.swift */; };
 		328419852246C8F1009616B0 /* UUIDKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 328419842246C8F1009616B0 /* UUIDKey.swift */; };
+		32B1D90322A48E560038BC4F /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32B1D90222A48E560038BC4F /* DateValueFormatter.swift */; };
 		32E434922246C57900AC263C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32E434912246C57900AC263C /* Assets.xcassets */; };
 		DA92F6951B7496206E801233 /* libPods-TBITracker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6B82C3B0D2DEF903778224B5 /* libPods-TBITracker.a */; };
 /* End PBXBuildFile section */
@@ -35,6 +36,7 @@
 		328419802246C850009616B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		328419822246C8E8009616B0 /* BalloonMarker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalloonMarker.swift; sourceTree = "<group>"; };
 		328419842246C8F1009616B0 /* UUIDKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UUIDKey.swift; sourceTree = "<group>"; };
+		32B1D90222A48E560038BC4F /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		32E434872246C57600AC263C /* TBITracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TBITracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		32E434912246C57900AC263C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		32E434962246C57900AC263C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				3284196C2246C7ED009616B0 /* AppDelegate.swift */,
 				328419742246C809009616B0 /* LoginViewController.swift */,
 				3284196E2246C7FC009616B0 /* ChemicalCompositionViewController.swift */,
+				32B1D90222A48E560038BC4F /* DateValueFormatter.swift */,
 				328419722246C809009616B0 /* PotassiumViewController.swift */,
 				3284196F2246C7FD009616B0 /* GlucoseViewController.swift */,
 				328419732246C809009616B0 /* LactateViewController.swift */,
@@ -211,6 +214,7 @@
 				328419752246C809009616B0 /* PotassiumViewController.swift in Sources */,
 				3284196D2246C7EE009616B0 /* AppDelegate.swift in Sources */,
 				328419762246C809009616B0 /* LactateViewController.swift in Sources */,
+				32B1D90322A48E560038BC4F /* DateValueFormatter.swift in Sources */,
 				328419712246C7FD009616B0 /* GlucoseViewController.swift in Sources */,
 				328419702246C7FD009616B0 /* ChemicalCompositionViewController.swift in Sources */,
 				328419832246C8E8009616B0 /* BalloonMarker.swift in Sources */,
