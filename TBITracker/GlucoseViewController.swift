@@ -47,7 +47,7 @@ class GlucoseViewController: UIViewController {
                 let Cal1 : Double = Double(myGCal1)!
                 let Cal2 : Double = Double(myGCal2)!
                 let Cal3 : Double = Double(myGCal3)!
-                setConcValues(p1 : Cal1, p2: Cal2, p3: Cal3)
+                setConcValues(v1 : Cal1, v2: Cal2, v3: Cal3)
             }
         }
     }
@@ -100,16 +100,31 @@ class GlucoseViewController: UIViewController {
         setG.setColor(.green)
     }
     
-    func setConcValues(p1 : Double, p2 : Double, p3 : Double) {
+    func setConcValues(v1 : Double, v2 : Double, v3 : Double) {
         
-        // find calibration equation: y = mx + c
+        // find line of best fit to find conversion from voltage -> conc in form conc = m*voltage + c
+        let voltage = [v1, v2, v3] // mV
+        let conc = [0.0, 1.0, 2.0] // mM
+        let mean_voltage: Double = (v1 + v2 + v3)/3
+        let mean_conc: Double = 1 //(0 + 1 + 2)/3
+        var num: Double = 0
+        var den: Double = 0
+        
+        // using least squares method
+        for i in 0...2 {
+            num = num + (voltage[i] - mean_voltage)*(conc[i] - mean_conc)
+            den = den + pow((voltage[i] - mean_voltage), 2)
+        }
+        
+        let m = num/den
+        let c = mean_conc - m*mean_voltage
         
         
         // sets x and y values for Glucose
         let entriesG = (0..<Garr.count).map { (i) -> ChartDataEntry in
-            let Gval = Garr[i]
+            let GConcval = m*Garr[i] + c
             let timeValG = timeG[i]
-            return ChartDataEntry(x: timeValG, y: Gval)
+            return ChartDataEntry(x: timeValG, y: GConcval)
         }
         let setG = LineChartDataSet(values: entriesG, label: "[Glucose]")
         
