@@ -13,7 +13,8 @@ public class DateValueFormatter: NSObject, IAxisValueFormatter {
     
     override init() {
         super.init()
-        dateFormatter.dateFormat = "dd MMM HH:mm"
+        //dateFormatter.dateFormat = "dd MMM HH:mm"
+        dateFormatter.dateFormat = "HH:mm:ss"
     }
     
     public func stringForValue(_ value: Double, axis: AxisBase?) -> String {

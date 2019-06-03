@@ -181,7 +181,14 @@ open class BalloonMarker: MarkerImage
     
     open override func refreshContent(entry: ChartDataEntry, highlight: Highlight)
     {
-        setLabel("y: " + String(entry.y) + "\n" + "x: " + String(entry.x))
+        //setLabel("y: " + String(entry.y) + "\n" + "x: " + String(entry.x))
+        
+        // modifying to set x label as Date()
+        let time = Date(timeIntervalSince1970: entry.x)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm:ss"
+        let timeString = formatter.string(from: time)
+        setLabel("y: " + String(entry.y) + "\n" + "x: " + String(timeString))
     }
     
     open func setLabel(_ newLabel: String)
