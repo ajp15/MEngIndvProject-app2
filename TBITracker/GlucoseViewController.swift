@@ -12,12 +12,12 @@ import Charts
 class GlucoseViewController: UIViewController {
     
     var myArr: [Double] = []
-    var myTime: [Double] = []
+    var myTime: [Date] = []
     var myGCal1: String = ""
     var myGCal2: String = ""
     var myGCal3: String = ""
     var Garr: [Double] = []
-    var timeG: [Double] = []
+    var timeG: [Date] = []
 
     // IBOutlets
     @IBOutlet weak var glucoseLineChartView: LineChartView!
@@ -76,6 +76,9 @@ class GlucoseViewController: UIViewController {
         self.glucoseLineChartView.rightAxis.enabled = false
         self.glucoseLineChartView.backgroundColor = .white
         self.glucoseLineChartView.legend.enabled = false
+        self.glucoseLineChartView.xAxis.labelPosition = .bottom
+        let xValuesNumberFormatter = DateValueFormatter()
+        self.glucoseLineChartView.xAxis.valueFormatter = xValuesNumberFormatter
     }
     
     func setChartValues() {
@@ -83,7 +86,7 @@ class GlucoseViewController: UIViewController {
         // sets x and y values for Glucose
         let entriesG = (0..<Garr.count).map { (i) -> ChartDataEntry in
             let Gval = Garr[i]
-            let timeValG = timeG[i]
+            let timeValG = timeG[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValG, y: Gval)
         }
         let setG = LineChartDataSet(values: entriesG, label: "[Glucose]")
@@ -123,7 +126,7 @@ class GlucoseViewController: UIViewController {
         // sets x and y values for Glucose
         let entriesG = (0..<Garr.count).map { (i) -> ChartDataEntry in
             let GConcval = m*Garr[i] + c
-            let timeValG = timeG[i]
+            let timeValG = timeG[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValG, y: GConcval)
         }
         let setG = LineChartDataSet(values: entriesG, label: "[Glucose]")

@@ -12,10 +12,10 @@ import Charts
 class PotassiumViewController: UIViewController {
     
     var myArr: [Double] = []
-    var myTime: [Double] = []
+    var myTime: [Date] = []
     var myKCal1: String = ""
     var Karr: [Double] = []
-    var timeK: [Double] = []
+    var timeK: [Date] = []
     
     // IBOutlets
     @IBOutlet weak var kLineChartView: LineChartView!
@@ -72,6 +72,9 @@ class PotassiumViewController: UIViewController {
         self.kLineChartView.rightAxis.enabled = false
         self.kLineChartView.backgroundColor = .white
         self.kLineChartView.legend.enabled = false
+        self.kLineChartView.xAxis.labelPosition = .bottom
+        let xValuesNumberFormatter = DateValueFormatter()
+        self.kLineChartView.xAxis.valueFormatter = xValuesNumberFormatter
     }
     
     func setChartValues() {
@@ -79,7 +82,7 @@ class PotassiumViewController: UIViewController {
         // sets x and y values for K+
         let entriesK = (0..<Karr.count).map { (i) -> ChartDataEntry in
             let Kval = Karr[i]
-            let timeValK = timeK[i]
+            let timeValK = timeK[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValK, y: Kval)
         }
         let setK = LineChartDataSet(values: entriesK, label: "[K+]")
@@ -101,7 +104,7 @@ class PotassiumViewController: UIViewController {
         // sets x and y values for K+ IN CONC
         let entriesK = (0..<Karr.count).map { (i) -> ChartDataEntry in
             let KConcval = pow(10, (Karr[i]/1000 - (Kacsf - 59*log10(2.7)))/59)
-            let timeValK = timeK[i]
+            let timeValK = timeK[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValK, y: KConcval)
         }
         let setK = LineChartDataSet(values: entriesK, label: "[K+]")

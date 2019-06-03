@@ -89,13 +89,13 @@ class ChemicalCompositionViewController: UIViewController {
         if segue.identifier == "potassium" {
             let KController = segue.destination as! PotassiumViewController
             KController.myArr = Karr
-            //KController.myTime = timeK
+            KController.myTime = timeK
             KController.myKCal1 = KCal1.text ?? ""
         }
         else if segue.identifier == "glucose" {
             let GController = segue.destination as! GlucoseViewController
             GController.myArr = Garr
-            //GController.myTime = timeG
+            GController.myTime = timeG
             GController.myGCal1 = GCal1.text ?? ""
             GController.myGCal2 = GCal2.text ?? ""
             GController.myGCal3 = GCal3.text ?? ""
@@ -104,7 +104,7 @@ class ChemicalCompositionViewController: UIViewController {
         else if segue.identifier == "lactate" {
             let LController = segue.destination as! LactateViewController
             LController.myArr = Larr
-            //LController.myTime = timeL
+            LController.myTime = timeL
             LController.myLCal1 = LCal1.text ?? ""
             LController.myLCal2 = LCal2.text ?? ""
             LController.myLCal3 = LCal3.text ?? "" 
