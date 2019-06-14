@@ -103,7 +103,7 @@ class PotassiumViewController: UIViewController {
         
         // sets x and y values for K+ IN CONC
         let entriesK = (0..<Karr.count).map { (i) -> ChartDataEntry in
-            let KConcval = pow(10, (Karr[i]/1000 - (Kacsf - 59*log10(2.7)))/59)
+            let KConcval = pow(10, (Karr[i] - (Kacsf - 54.42*log10(2.7)))/54.42)
             let timeValK = timeK[i].timeIntervalSince1970
             return ChartDataEntry(x: timeValK, y: KConcval)
         }
