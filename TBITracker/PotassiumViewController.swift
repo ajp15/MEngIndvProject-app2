@@ -26,7 +26,7 @@ class PotassiumViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 0 {
             // segmented control on voltage
-            KLabel.text = "Voltage (mV) vs. Time (ms)"
+            KLabel.text = "Voltage (mV) vs. Time"
             KLabel.textColor = UIColor.black
             setChartValues()
         }
@@ -39,7 +39,7 @@ class PotassiumViewController: UIViewController {
             }
             else {
                 // calibration values provided
-                KLabel.text = "Concentration (mM) vs. Time (ms)"
+                KLabel.text = "Concentration (mM) vs. Time"
                 KLabel.textColor = UIColor.black
                 // already in mV as voltage recordings received are in mV
                 let KCal1 : Double = Double(myKCal1)!

@@ -28,7 +28,7 @@ class GlucoseViewController: UIViewController {
         
         if sender.selectedSegmentIndex == 0 {
             // segmented control on voltage
-            GLabel.text = "Voltage (mV) vs. Time (ms)"
+            GLabel.text = "Voltage (mV) vs. Time"
             GLabel.textColor = UIColor.black
             setChartValues()
         }
@@ -41,7 +41,7 @@ class GlucoseViewController: UIViewController {
             }
             else {
                 // calibration values provided
-                GLabel.text = "Concentration (mM) vs. Time (ms)"
+                GLabel.text = "Concentration (mM) vs. Time"
                 GLabel.textColor = UIColor.black
                 
                 let Cal1 : Double = Double(myGCal1)!

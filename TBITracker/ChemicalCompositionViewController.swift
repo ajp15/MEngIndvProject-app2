@@ -303,7 +303,7 @@ extension ChemicalCompositionViewController: CBPeripheralDelegate {
             // store in corresponding array depending on firstLetter
             if firstLetter == "K" {
                 timeK.append(realTime) // time in seconds
-                Karr.append(Double(val)!)
+                Karr.append(Double(val)!/100)  // Changed to divide by 100 to accomodate to testing SD signals
             } else if firstLetter == "G" {
                 timeG.append(realTime) // time in seconds
                 Garr.append(Double(val)!)

@@ -27,7 +27,7 @@ class LactateViewController: UIViewController {
     @IBAction func Ltoggle(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             // segmented control on voltage
-            LLabel.text = "Voltage (mV) vs. Time (ms)"
+            LLabel.text = "Voltage (mV) vs. Time"
             LLabel.textColor = UIColor.black
             setChartValues()
         }
@@ -40,7 +40,7 @@ class LactateViewController: UIViewController {
             }
             else {
                 // calibration values provided
-                LLabel.text = "Concentration (mM) vs. Time (ms)"
+                LLabel.text = "Concentration (mM) vs. Time"
                 LLabel.textColor = UIColor.black
                 
                 let Cal1 : Double = Double(myLCal1)!
